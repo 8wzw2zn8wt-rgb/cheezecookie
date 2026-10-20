@@ -1,5 +1,5 @@
 // 치즈쿠키 가계부 — 오프라인에서도 열리도록 파일을 저장해 둠. 앱을 고치면 VERSION 숫자를 올리기.
-const VERSION = "ccgb-v1";
+const VERSION = "ccgb-v2";
 const FILES = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener("activate", e => {

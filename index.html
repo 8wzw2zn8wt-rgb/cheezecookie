@@ -206,7 +206,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .days{font-size:19px;color:var(--ink);margin-top:4px}
 .days b{color:var(--pink-ink)}
 .row2.even{grid-template-columns:1fr 1fr}
-input[type=date].inp{font-size:20px;padding-block:8px}
+input[type=date].inp{font-size:20px;padding-block:8px;-webkit-appearance:none;appearance:none;display:block;width:100%;max-width:100%;min-width:0;min-height:44px;text-align:left}
+input[type=date].inp::-webkit-date-and-time-value{text-align:left;margin:0}
+input[type=date].inp::-webkit-datetime-edit{padding:0}
+.field{min-width:0}
 @media (max-width:420px){.row2.even{grid-template-columns:1fr 1fr}}
 html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);-webkit-text-size-adjust:100%}
 body{margin:0}
